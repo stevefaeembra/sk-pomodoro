@@ -53,3 +53,17 @@ progress[value]::-moz-progress-bar {
 .digit-label {
   font-size: 1.5rem;
 }
+
+#controlBar {
+  display: flex;
+  flex-direction: row;
+}
+
+#controlBar-start,
+#controlBar-pause {
+  width: 64px;
+  height: 64px;
+  margin-right: 1rem;
+  background-color: pink;
+  border: 1px solid black;
+}
