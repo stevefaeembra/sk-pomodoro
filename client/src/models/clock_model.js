@@ -2,6 +2,8 @@ const PubSub = require("../helpers/pub_sub.js");
 
 const ClockModel = function (minutesDuration) {
   this.minutesDuration = minutesDuration;
+  this.max = this.minutesDuration * 60;
+  this.value = this.max;
   this.mins = 0;
   this.secs = 0;
 }
@@ -16,11 +18,17 @@ ClockModel.prototype.tick = function (clockmodel) {
   }
   clockmodel.mins = mins;
   clockmodel.secs = secs;
+  clockmodel.value -= 1;
   if (mins==0 && secs==0) {
     PubSub.publish("clockModel:finished", {});
   }
   console.log(`${mins}m ${secs}s`);
-  PubSub.publish("clockModel:tick", {mins:mins, secs:secs});
+  PubSub.publish("clockModel:tick", {
+    mins:mins,
+    secs:secs,
+    max: clockmodel.max,
+    value: clockmodel.value
+  });
 };
 
 ClockModel.prototype.bindEvents = function () {
