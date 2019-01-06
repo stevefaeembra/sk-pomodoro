@@ -24,6 +24,7 @@ body {
 h1 {
   padding-top: 2rem;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 progress {
@@ -69,10 +70,11 @@ progress[value]::-moz-progress-bar {
 
 
 #controlBar-start {
-  width: 4rem;
-  height: 4rem;
+  width: 8rem;
+  height: 8rem;
   background-image: url("../images/tomato.png");
   background-size: cover;
   border: none;
   background-color: none;
+  margin-bottom: 2rem;
 }

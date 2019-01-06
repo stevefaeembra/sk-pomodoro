@@ -20,7 +20,7 @@ ClockView.prototype.render = function (detail) {
 
   const spanMinsLabel = document.createElement("span");
   spanMinsLabel.className = "digit-label";
-  spanMinsLabel.innerHTML = "m  ";
+  spanMinsLabel.innerHTML = " mins ";
 
   const spanSecs = document.createElement("span");
   spanSecs.className="digit-secs";
@@ -28,7 +28,7 @@ ClockView.prototype.render = function (detail) {
 
   const spanSecsLabel = document.createElement("span");
   spanSecsLabel.className = "digit-label";
-  spanSecsLabel.innerHTML = "s ";
+  spanSecsLabel.innerHTML = " secs ";
 
   divTime.appendChild(spanMins);
   divTime.appendChild(spanMinsLabel);
