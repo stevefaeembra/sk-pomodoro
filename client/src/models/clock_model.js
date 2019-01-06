@@ -22,7 +22,7 @@ ClockModel.prototype.tick = function (clockmodel) {
   if (mins==0 && secs==0) {
     PubSub.publish("clockModel:finished", {});
   }
-  console.log(`${mins}m ${secs}s`);
+  //console.log(`${mins}m ${secs}s`);
   PubSub.publish("clockModel:tick", {
     mins:mins,
     secs:secs,
@@ -37,14 +37,14 @@ ClockModel.prototype.bindEvents = function () {
     this.mins = this.minutesDuration;
     this.secs = 0;
     this.max = this.minutesDuration * 60;
-    this.value = this.max;  
+    this.value = this.max;
     this.timerId = window.setInterval(this.tick, 1000, this); // once per second
-    console.log("Started!")
+    //console.log("Started!")
   });
   PubSub.subscribe("clockModel:finished", (event) => {
     PubSub.signForDelivery(this,event);
     window.clearInterval(this.timerId); // cancel timer!
-    console.log("Started!")
+    //console.log("Started!")
   });
 };
 
