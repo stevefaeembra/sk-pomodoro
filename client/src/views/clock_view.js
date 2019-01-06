@@ -9,10 +9,32 @@ ClockView.prototype.render = function (detail) {
   const secs = detail.secs;
   const progressMax = detail.max;
   const progressValue = detail.value;
+
   this.element.innerHTML = "";
   const divTime = document.createElement("div");
   divTime.className = "timer-time";
-  divTime.innerHTML = `${mins}m ${secs}s`;
+
+  const spanMins = document.createElement("span");
+  spanMins.className = "digit-mins";
+  spanMins.innerHTML = parseInt(mins);
+
+  const spanMinsLabel = document.createElement("span");
+  spanMinsLabel.className = "digit-label";
+  spanMinsLabel.innerHTML = "m  ";
+
+  const spanSecs = document.createElement("span");
+  spanSecs.className="digit-secs";
+  spanSecs.innerHTML = parseInt(secs);
+
+  const spanSecsLabel = document.createElement("span");
+  spanSecsLabel.className = "digit-label";
+  spanSecsLabel.innerHTML = "s ";
+
+  divTime.appendChild(spanMins);
+  divTime.appendChild(spanMinsLabel);
+  divTime.appendChild(spanSecs);
+  divTime.appendChild(spanSecsLabel);
+
   const divProgress = document.createElement("progress");
   divProgress.id = "timer-progress";
   divProgress.setAttribute("max", progressMax);

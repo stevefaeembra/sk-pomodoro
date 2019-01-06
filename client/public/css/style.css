@@ -8,7 +8,7 @@
 html {
   font-size: 16px;
   font-family: 'Merriweather', sans-serif;
-  background-color: wheat;
+  background-color: whitesmoke;
 }
 
 body {
@@ -42,4 +42,14 @@ progress[value]::-webkit-progress-value {
 }
 progress[value]::-moz-progress-bar {
   color:red;
+}
+
+.digit-mins,
+.digit-secs {
+  color: red;
+  font-weight: bold;
+}
+
+.digit-label {
+  font-size: 1.5rem;
 }
