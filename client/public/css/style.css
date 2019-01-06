@@ -18,6 +18,12 @@ body {
 
 #clock {
   font-size: 3rem;
+  text-align: center;
+}
+
+h1 {
+  padding-top: 2rem;
+  text-align: center;
 }
 
 progress {
@@ -56,6 +62,7 @@ progress[value]::-moz-progress-bar {
 
 #controlBar {
   display: flex;
+  justify-content: center;
   flex-direction: row;
 }
 
