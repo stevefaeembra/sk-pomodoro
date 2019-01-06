@@ -36,6 +36,8 @@ ClockModel.prototype.bindEvents = function () {
     PubSub.signForDelivery(this,event);
     this.mins = this.minutesDuration;
     this.secs = 0;
+    this.max = this.minutesDuration * 60;
+    this.value = this.max;  
     this.timerId = window.setInterval(this.tick, 1000, this); // once per second
     console.log("Started!")
   });
