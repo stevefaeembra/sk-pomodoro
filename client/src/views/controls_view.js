@@ -7,14 +7,8 @@ const ControlsView = function (attachmentPoint) {
   divControlBar.id = "controlBar";
   const divStartButton = document.createElement("div");
   divStartButton.id ="controlBar-start";
-  divStartButton.innerHTML = "Start!";
-  const divPauseButton = document.createElement("div");
-  divPauseButton.id ="controlBar-pause";
-  divPauseButton.innerHTML = "Pause!";
   this.startButton = divStartButton;
-  this.divPauseButton = divPauseButton;
   divControlBar.appendChild(divStartButton);
-  divControlBar.appendChild(divPauseButton);
   this.element.appendChild(divControlBar);
 }
 

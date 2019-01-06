@@ -59,11 +59,13 @@ progress[value]::-moz-progress-bar {
   flex-direction: row;
 }
 
-#controlBar-start,
-#controlBar-pause {
-  width: 64px;
-  height: 64px;
-  margin-right: 1rem;
-  background-color: pink;
-  border: 1px solid black;
+
+
+#controlBar-start {
+  width: 4rem;
+  height: 4rem;
+  background-image: url("../images/tomato.png");
+  background-size: cover;
+  border: none;
+  background-color: none;
 }
