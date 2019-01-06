@@ -6,7 +6,7 @@ const ClockView = require("./views/clock_view");
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM loaded");
   const items = [
-    new ClockModel(25),
+    new ClockModel(3),
     new ClockView("#clock")
   ];
   items.forEach((item) => {

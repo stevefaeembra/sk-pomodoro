@@ -32,11 +32,11 @@ progress[value] {
   border:2px solid black;
 }
 progress[value]::-webkit-progress-bar {
-  background-color: black;
+  background: linear-gradient(to bottom, #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#fdffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
   border-radius: 8px;
 }
 progress[value]::-webkit-progress-value {
-  background: repeating-linear-gradient(-45deg, green 0px, yellow 5px, green 10px);
+  background: linear-gradient(to bottom, #b4e391 0%,#61c419 77%,#b4e391 100%);
   border-radius: 8px;
 }
 progress[value]::-moz-progress-bar {
