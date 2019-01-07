@@ -7,7 +7,7 @@ const ControlsView = require("./views/controls_view");
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM loaded");
   const items = [
-    new ClockModel(25),
+    new ClockModel(1),
     new ClockView("#clock"),
     new ControlsView("#controls")
   ];

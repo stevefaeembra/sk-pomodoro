@@ -12,6 +12,13 @@ ClockView.prototype.render = function (detail) {
   const percentage = (parseFloat(progressValue) / parseFloat(progressMax))*100.0;
 
   this.element.innerHTML = "";
+
+  const divRow1 = document.createElement("div");
+  divRow1.className = "timer-row";
+
+  const divRow2 = document.createElement("div");
+  divRow2.className = "timer-row";
+
   const divTime = document.createElement("div");
   divTime.className = "timer-time";
 
@@ -20,8 +27,8 @@ ClockView.prototype.render = function (detail) {
   spanMins.innerHTML = parseInt(mins);
 
   const spanMinsLabel = document.createElement("span");
-  spanMinsLabel.className = "digit-label";
-  spanMinsLabel.innerHTML = " mins ";
+  spanMinsLabel.className = "digit-mins";
+  spanMinsLabel.innerHTML = " : ";
 
   const spanSecs = document.createElement("span");
   spanSecs.className="digit-secs";
@@ -29,22 +36,25 @@ ClockView.prototype.render = function (detail) {
 
   const spanSecsLabel = document.createElement("span");
   spanSecsLabel.className = "digit-label";
-  spanSecsLabel.innerHTML = " secs ";
+  spanSecsLabel.innerHTML = "";
 
   const spanPercent = document.createElement("span");
   spanPercent.className = "digit-percent";
-  spanPercent.innerHTML = `${percentage.toFixed(1)}`;
+  spanPercent.innerHTML = `${parseInt(percentage)}`;
 
   const spanPercentLabel = document.createElement("span");
   spanPercentLabel.className = "digit-label";
   spanPercentLabel.innerHTML = "%";
 
-  divTime.appendChild(spanMins);
-  divTime.appendChild(spanMinsLabel);
-  divTime.appendChild(spanSecs);
-  divTime.appendChild(spanSecsLabel);
-  divTime.appendChild(spanPercent);
-  divTime.appendChild(spanPercentLabel);
+  divRow1.appendChild(spanMins);
+  divRow1.appendChild(spanMinsLabel);
+  divRow1.appendChild(spanSecs);
+  divRow1.appendChild(spanSecsLabel);
+  divRow2.appendChild(spanPercent);
+  divRow2.appendChild(spanPercentLabel);
+
+  divTime.appendChild(divRow1);
+  divTime.appendChild(divRow2);
 
   const divProgress = document.createElement("progress");
   divProgress.id = "timer-progress";
