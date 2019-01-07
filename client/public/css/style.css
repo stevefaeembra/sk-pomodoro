@@ -7,7 +7,7 @@
 
 html {
   font-size: 16px;
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Major Mono Display', monospace;
   background-color: #333;
 }
 
@@ -23,9 +23,18 @@ body {
 
 h1 {
   color: white;
-  padding-top: 2rem;
+  font-size: 4rem;
+  padding-top: 3rem;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0px 0px 60px yellow;
+}
+
+h2 {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 progress {
@@ -56,10 +65,14 @@ progress[value]::-moz-progress-bar {
 .digit-mins,
 .digit-secs,
 .digit-percent {
-  color: white;
-  text-shadow: 0px 0px 33px yellow;
+  color: orange;
+  text-shadow: 0px 0px 60px yellow;
   font-weight: bold;
   font-family: 'Major Mono Display', monospace;
+}
+
+.digit-percent {
+  font-size: 2rem;
 }
 
 .digit-label {
@@ -75,8 +88,8 @@ progress[value]::-moz-progress-bar {
 
 
 #controlBar-start {
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
   background-image: url("../images/tomato.png");
   background-size: cover;
   border: none;

@@ -4,6 +4,16 @@ const ClockView = function (attachmentPoint) {
   this.element = document.querySelector(attachmentPoint);
 }
 
+ClockView.prototype.leftPad = function (value) {
+  // left pad with leading zero if less than 10
+  const amt = parseInt(value);
+  if (value<10) {
+    return `0${amt}`;
+  } else {
+    return `${amt}`;
+  }
+};
+
 ClockView.prototype.render = function (detail) {
   const mins = detail.mins;
   const secs = detail.secs;
@@ -24,15 +34,15 @@ ClockView.prototype.render = function (detail) {
 
   const spanMins = document.createElement("span");
   spanMins.className = "digit-mins";
-  spanMins.innerHTML = parseInt(mins);
+  spanMins.innerHTML = this.leftPad(mins);
 
   const spanMinsLabel = document.createElement("span");
   spanMinsLabel.className = "digit-mins";
-  spanMinsLabel.innerHTML = " : ";
+  spanMinsLabel.innerHTML = ":";
 
   const spanSecs = document.createElement("span");
   spanSecs.className="digit-secs";
-  spanSecs.innerHTML = parseInt(secs);
+  spanSecs.innerHTML = this.leftPad(secs);
 
   const spanSecsLabel = document.createElement("span");
   spanSecsLabel.className = "digit-label";
@@ -44,7 +54,7 @@ ClockView.prototype.render = function (detail) {
 
   const spanPercentLabel = document.createElement("span");
   spanPercentLabel.className = "digit-label";
-  spanPercentLabel.innerHTML = "%";
+  spanPercentLabel.innerHTML = "";
 
   divRow1.appendChild(spanMins);
   divRow1.appendChild(spanMinsLabel);
