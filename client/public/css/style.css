@@ -28,11 +28,12 @@ h1 {
 }
 
 progress {
+  margin-top: 1rem;
   color:white;
   border-radius: 8px;
   border:2px solid black;
   width: 100%;
-  height: 32px;
+  height: 64px;
 }
 
 progress[value] {
