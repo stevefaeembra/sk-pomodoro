@@ -9,6 +9,7 @@ ClockView.prototype.render = function (detail) {
   const secs = detail.secs;
   const progressMax = detail.max;
   const progressValue = detail.value;
+  const percentage = (parseFloat(progressValue) / parseFloat(progressMax))*100.0;
 
   this.element.innerHTML = "";
   const divTime = document.createElement("div");
@@ -30,10 +31,20 @@ ClockView.prototype.render = function (detail) {
   spanSecsLabel.className = "digit-label";
   spanSecsLabel.innerHTML = " secs ";
 
+  const spanPercent = document.createElement("span");
+  spanPercent.className = "digit-percent";
+  spanPercent.innerHTML = `${percentage.toFixed(1)}`;
+
+  const spanPercentLabel = document.createElement("span");
+  spanPercentLabel.className = "digit-label";
+  spanPercentLabel.innerHTML = "%";
+
   divTime.appendChild(spanMins);
   divTime.appendChild(spanMinsLabel);
   divTime.appendChild(spanSecs);
   divTime.appendChild(spanSecsLabel);
+  divTime.appendChild(spanPercent);
+  divTime.appendChild(spanPercentLabel);
 
   const divProgress = document.createElement("progress");
   divProgress.id = "timer-progress";

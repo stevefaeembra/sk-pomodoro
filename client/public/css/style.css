@@ -53,7 +53,8 @@ progress[value]::-moz-progress-bar {
 }
 
 .digit-mins,
-.digit-secs {
+.digit-secs,
+.digit-percent {
   color: red;
   font-weight: bold;
 }
