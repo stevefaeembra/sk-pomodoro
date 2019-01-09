@@ -8,7 +8,7 @@ const AlarmView = require("./views/alarm_view");
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM loaded");
   const items = [
-    new ClockModel(1),
+    new ClockModel(25),
     new ClockView("#clock"),
     new ControlsView("#controls"),
     new AlarmView("#alarm")
