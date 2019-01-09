@@ -20,6 +20,7 @@ ClockModel.prototype.tick = function (clockmodel) {
   clockmodel.secs = secs;
   clockmodel.value -= 1;
   if (mins==0 && secs==0) {
+    PubSub.publish("clockModel:alarm",{});
     PubSub.publish("clockModel:finished", {});
   }
   //console.log(`${mins}m ${secs}s`);
