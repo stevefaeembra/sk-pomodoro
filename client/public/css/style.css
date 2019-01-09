@@ -12,7 +12,6 @@ html {
 }
 
 body {
-  width: 50%;
   margin: 0 auto;
 }
 
@@ -44,11 +43,11 @@ h2 {
 }
 
 progress {
+  width: 50%;
   margin-top: 1rem;
   color:white;
   border-radius: 8px;
   border:2px solid black;
-  width: 100%;
   height: 64px;
 }
 
@@ -83,6 +82,12 @@ progress[value]::-moz-progress-bar {
 
 .digit-label {
   font-size: 1.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #controlBar {
