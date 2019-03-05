@@ -1,7 +1,7 @@
 Pomodoro Timer
 ==============
 
-Pomodoro Timer. Single Page Application, can be run from index.html or using Node from localhost:3000
+Pomodoro Timer. Single Page Application, can be run from index.html or using Node from localhost:7666
 
 ![screenshot](./images/screenshot.png)
 
@@ -11,12 +11,12 @@ To build in Docker, **cd** into the project directory and run
 
 ```
 docker build --no-cache -t node_pomodoro .
-docker run -d -p 3000:3000 node_pomodoro
+docker run -d -p 7666:7666 node_pomodoro
 ```
 then point the browser to
 
 ```
-localhost:3000/
+localhost:7666/
 ```
 
 **Current Issues**
